@@ -17,6 +17,7 @@ body{
   width: 500px;
   height: 500px;
   background-color: white;
+  border: 2px solid black;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
@@ -29,9 +30,42 @@ body{
   width: 150px;
   height: 50px;
   border-radius: 10px;
-  background-color: lightgreen;
+  background-color: #D72700;
+  border: 1px solid black;
+  color: white;
 }
 
-.mario{
+#jump:active{
+  background-color: #ff0000;
+}
+
+#jump:focus{
+ outline: none;
+}
+
+.mario, .marioJump{
   height: 20%;
+  display: none;
+}
+
+.active{
+  display: block;
+}
+
+
+.JumpHop{
+  animation-name: hop;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+@keyframes hop {
+  0%{
+    transform: translateX(0%);
+  }
+  50%{
+    transform: translate(40%);
+  }
+  100%{
+    transform: translate(80%);
+  }
 }
